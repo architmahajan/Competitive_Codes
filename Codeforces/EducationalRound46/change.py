@@ -1,0 +1,59 @@
+n=int(input())
+a=[]
+aa=[]
+bb=[]
+for i in range(0,9):
+	aa.append(0)
+for i in range(0,9):
+	bb.append(0)
+for i in range(0,n):
+	s=input()
+	if(s=="M"):
+		aa[0]+=1
+	elif(s=="S"):
+		aa[1]+=1
+	elif(s=="L"):
+		aa[2]+=1
+	elif(s=="XS"):
+		aa[3]+=1
+	elif(s=="XL"):
+		aa[4]+=1
+	elif(s=="XXS"):
+		aa[5]+=1
+	elif(s=="XXL"):
+		aa[6]+=1
+	elif(s=="XXXS"):
+		aa[7]+=1
+	elif(s=="XXXL"):
+		aa[8]+=1
+	a.append(s)
+b=[]
+for i in range(0,n):
+	s=input()
+	if(s=="M"):
+		bb[0]+=1
+	elif(s=="S"):
+		bb[1]+=1
+	elif(s=="L"):
+		bb[2]+=1
+	elif(s=="XS"):
+		bb[3]+=1
+	elif(s=="XL"):
+		bb[4]+=1
+	elif(s=="XXS"):
+		bb[5]+=1
+	elif(s=="XXL"):
+		bb[6]+=1
+	elif(s=="XXXS"):
+		bb[7]+=1
+	elif(s=="XXXL"):
+		bb[8]+=1
+	b.append(s)
+count1=0
+for i in range(0,9):
+	if(aa[i]>bb[i]):
+		count1+=aa[i]-bb[i]
+	else:
+		count1+=bb[i]-aa[i]
+count1=count1/2
+print(int(count1))
